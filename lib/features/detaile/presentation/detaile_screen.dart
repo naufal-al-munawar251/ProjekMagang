@@ -14,7 +14,13 @@ class Detail extends GetView<DetaileController>{
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text(controller.Data.read("NamaTim")),
+        title: Row(
+          children: [
+            Image(image: NetworkImage(controller.Data.read("UrlImage")),width: 25,),
+            Container(width: 10,),
+            Text(controller.Data.read("NamaTim"))
+          ],
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(

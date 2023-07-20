@@ -28,9 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     _controller.onInit();
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text("Ini splash"),
+        child: Image.asset('assets/bola.png',width: 200,),
       ),
     );
   }

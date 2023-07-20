@@ -40,6 +40,7 @@ class DummyScreen extends GetView<HomeController> {
     return AppBar(
       title: Row(
         children: [
+          Padding(padding: EdgeInsets.only(right: 10),child: Image.asset('assets/bola.png',width: 30,),),
           const Text("Esport"),
         ],
       ),
