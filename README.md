@@ -1,6 +1,6 @@
 # Flutter RAD
 
-radyaflutterbaseproject
+Projek Magang Naufal Al Munawar
 
 ## Getting Started
 
