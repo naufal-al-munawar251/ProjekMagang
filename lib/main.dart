@@ -28,9 +28,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: AppConst.appName,
-      theme: ThemeData(
-        primarySwatch: AppStyle.appTheme,
-      ),
       initialRoute: AppRoute.defaultRoute,
       unknownRoute: GetPage(name: AppRoute.notFound, page: () => const UnknownRoutePage()),
       getPages: AppRoute.pages,
