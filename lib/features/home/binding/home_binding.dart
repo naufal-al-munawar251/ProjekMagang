@@ -10,7 +10,7 @@ class DummyBinding extends Bindings{
   void dependencies() {
     Get.lazyPut(() => DummyDataSource(Network.dioClient()));
     Get.lazyPut(() => DummyRepository(Get.find()));
-    Get.lazyPut(() => DummyController(Get.find()));
+    Get.lazyPut(() => HomeController(Get.find()));
   }
 
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:logger/logger.dart';
@@ -7,14 +8,16 @@ import '../../../components/util/state.dart';
 import '../repository/home_repository.dart';
 import 'home_state.dart';
 
-class DummyController extends GetxController {
+class HomeController extends GetxController {
   final DummyRepository _repository;
+  TextEditingController textController = TextEditingController();
+
   DummyState clubBola = DummyFoodIdle();
   RxInt index = RxInt(0);
   final GetStorage Data = GetStorage();
   int inde = 0;
   final _logger = Logger();
-  DummyController(this._repository);
+  HomeController(this._repository);
 
   @override
   void onInit() {

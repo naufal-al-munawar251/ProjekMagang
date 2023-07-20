@@ -6,8 +6,9 @@ import '../../detaile/presentation/detaile_screen.dart';
 import '../model/home_model.dart';
 import 'home_controller.dart';
 import 'home_state.dart';
+import 'package:anim_search_bar/anim_search_bar.dart';
 
-class DummyScreen extends GetView<DummyController> {
+class DummyScreen extends GetView<HomeController> {
   const DummyScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -37,13 +38,17 @@ class DummyScreen extends GetView<DummyController> {
 
   PreferredSizeWidget _appBar() {
     return AppBar(
-      title: const Text("Esport"),
+      title: Row(
+        children: [
+          const Text("Esport"),
+        ],
+      ),
       backgroundColor: Colors.blue,
     );
   }
 
   Widget _body() {
-        return GetBuilder<DummyController>(
+        return GetBuilder<HomeController>(
           builder: (ctrl) {
             final state = controller.clubBola;
 
@@ -74,15 +79,18 @@ class DummyScreen extends GetView<DummyController> {
         padding: const EdgeInsets.all(3.0),
         mainAxisSpacing: 8.0,
         crossAxisSpacing: 8.0,
-        children: listData.map((food) => _itemFood(food)).toList());
+        children: listData.map((food) => _itemClub(food)).toList());
   }
 
-  Widget _itemFood(SampleModel Club) {
+  Widget _itemClub(SampleModel Club) {
     return GestureDetector(
       onTap: () {
         controller.Data.write("NamaTim", Club.name!);
         controller.Data.write("UrlImage", Club.Icon!);
-        print(controller.Data.read("NamaTim"));
+        controller.Data.write("Lokasi", Club.Lokasi!);
+        controller.Data.write("Suka", Club.suka!);
+        controller.Data.write("kalender", Club.kalender!);
+        controller.Data.write("deskripsi", Club.desc!);
         Get.toNamed(AppRoute.detail);
       },
       child: Padding(
@@ -102,7 +110,7 @@ class DummyScreen extends GetView<DummyController> {
     );
   }
   Widget Favorite(){
-    return GetBuilder<DummyController>(
+    return GetBuilder<HomeController>(
       builder: (ctr){
         return Column(children: [
           ElevatedButton(onPressed: (){

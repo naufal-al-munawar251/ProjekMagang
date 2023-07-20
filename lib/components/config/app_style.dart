@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppStyle {
-  static const Color red500 = Color(0xFFE62129);
+  static const Color red500 = Color(0xFF0B81D5);
   static const Color yellow500 = Color(0xFFFFF000);
 
   /*
@@ -10,23 +10,23 @@ class AppStyle {
   * */
   static const MaterialColor appTheme = MaterialColor(_appthemePrimaryValue, <int, Color>{
     50: Color(0xFFFCE4E5),
-    100: Color(0xFFF8BCBF),
-    200: Color(0xFFF39094),
-    300: Color(0xFFEE6469),
-    400: Color(0xFFEA4249),
+    100: Color(0xFFA1D4FF),
+    200: Color(0xFF58B8FF),
+    300: Color(0xFF1C9BFA),
+    400: Color(0xFF0B81D5),
     500: Color(_appthemePrimaryValue),
-    600: Color(0xFFE31D24),
-    700: Color(0xFFDF181F),
-    800: Color(0xFFDB1419),
-    900: Color(0xFFD50B0F),
+    600: Color(0xFF0B81D5),
+    700: Color(0xFF0B81D5),
+    800: Color(0xFF0B81D5),
+    900: Color(0xFF0B81D5),
   });
   static const int _appthemePrimaryValue = 0xFFE62129;
 
   static const MaterialColor appthemeAccent = MaterialColor(_appThemeAccentValue, <int, Color>{
     100: Color(0xFFFFFFFF),
     200: Color(_appThemeAccentValue),
-    400: Color(0xFFFF9A9B),
-    700: Color(0xFFFF8082),
+    400: Color(0xFFA1D4FF),
+    700: Color(0xFF58B8FF),
   });
   static const int _appThemeAccentValue = 0xFFFFCDCD;
 
@@ -68,11 +68,11 @@ class AppStyle {
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: borderRadiusVerySmall(),
-          borderSide: BorderSide(color: focusBorderColor ?? Colors.red, width: 2),
+          borderSide: BorderSide(color: focusBorderColor ?? Colors.blue, width: 2),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: borderRadiusVerySmall(),
-          borderSide: BorderSide(color: focusBorderColor ?? Colors.red, width: 2),
+          borderSide: BorderSide(color: focusBorderColor ?? Colors.blue, width: 2),
         )
       );
 
