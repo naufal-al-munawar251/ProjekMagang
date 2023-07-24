@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
 import 'components/config/app_const.dart';
 import 'components/config/app_route.dart';
 import 'components/config/app_style.dart';
@@ -41,6 +40,7 @@ class UnknownRoutePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Colors.white,
       body: Center(child: Text('No route defined for this page')),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
@@ -18,9 +19,14 @@ class Detail extends GetView<DetaileController>{
           children: [
             Image(image: NetworkImage(controller.Data.read("UrlImage")),width: 25,),
             Container(width: 10,),
-            Text(controller.Data.read("NamaTim"))
+            Text(controller.Data.read("NamaTim")),
           ],
         ),
+        actions: [
+          Obx(() => IconButton(icon: Icon(controller.widgetIcon.value[controller.indexIcon.value],color: Colors.red,),onPressed: (){
+            controller.onLike();
+          },))
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -40,7 +46,7 @@ class Detail extends GetView<DetaileController>{
                   ],),),
 
                   Padding(padding: EdgeInsets.all(10),child: Row(children: [
-                    Icon(Icons.calendar_month,color: Colors.blue,),
+                    Icon(Icons.wordpress,color: Colors.blue,),
                     Padding(padding: EdgeInsets.all(5),child: Text(controller.Data.read("kalender")),)
                   ],),),
 

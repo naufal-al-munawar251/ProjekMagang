@@ -25,6 +25,7 @@ dependencies:
   expandable_text: ^2.3.0
   anim_search_bar: ^2.0.3
   uuid: ^3.0.6
+  animation_search_bar: ^0.0.10
   maps_launcher: ^2.0.1
   package_info_plus: ^4.0.1
 
